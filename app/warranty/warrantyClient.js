@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useTranslation } from "@/lib/useTranslation";
 
-function DealerPage() {
+function WarrantyPage() {
   const { t } = useTranslation();
   const whyReasons = ["why1", "why2", "why3", "why4", "why5", "why6", "why7"];
   const idealReasons = ["ideal1", "ideal2", "ideal3", "ideal4", "ideal5"];
@@ -350,4 +350,4 @@ function DealerPage() {
   );
 }
 
-export default DealerPage;
+export default WarrantyPage;
