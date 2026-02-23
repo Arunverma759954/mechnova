@@ -76,17 +76,18 @@ function WarrantyPage() {
       Contact Number *
     </label>
     <div className="flex">
-      <div className="flex items-center px-3 bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg">
-        🇮🇳 +91
-      </div>
-      <input
-        type="tel"
-        name="contactNumber"
-        placeholder="Enter your contact number"
-        required
-        className="w-full px-4 py-3 border border-gray-300 rounded-r-lg focus:border-[#0072ce] focus:outline-none"
-      />
-    </div>
+  <div className="flex items-center px-3 bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg whitespace-nowrap">
+    <span className="mr-1">🇮🇳</span>
+    <span>+91</span>
+  </div>
+  <input
+    type="tel"
+    name="contactNumber"
+    placeholder="Enter your contact number"
+    required
+    className="w-full px-4 py-3 border border-gray-300 rounded-r-lg focus:border-[#0072ce] focus:outline-none"
+  />
+</div>
   </div>
 
   {/* Product Code */}
