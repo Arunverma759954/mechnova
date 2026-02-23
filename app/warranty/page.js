@@ -5,6 +5,7 @@ export default function WarrantyPage() {
   return (
     <Suspense fallback={null}>
       <WarrantyClient />
+    
     </Suspense>
   )
 }
