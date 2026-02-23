@@ -26,18 +26,50 @@
     ]
   },
   {
-    "category": "Soplador",
+    "category": "Petrol Water Pump",
     "products": [
       {
-        "name": "MB26A",
-        "image": "/mechnova/products/blower/BB26A.webp",
-        "link": "/products/blower"
+        "name": "MWP1.5X1.5SA",
+        "image": "/mechnova/products/gasoline-water-pump/MWP1.5X1.5SA.webp",
+        "link": "/products/gasoline-water-pump"
       },
       {
-        "name": "MB43BA",
-        "image": "/mechnova/products/blower/BB43BA.webp",
-        "link": "/products/blower"
+        "name": "MWP3X3SA",
+        "image": "/mechnova/products/gasoline-water-pump/MWP3X3SA.webp",
+        "link": "/products/gasoline-water-pump"
       }
+    ]
+  },
+  {
+    "category": "Gasoline Engine",
+    "products": [
+      {
+        "name": "ME30A",
+        "image": "/mechnova/products/gasoline-engine/ME30A.webp",
+        "link": "/products/gasoline-engine"
+      },
+      {
+        "name": "ME70A",
+        "image": "/mechnova/products/gasoline-engine/ME70A.webp",
+        "link": "/products/gasoline-engine"
+      }
+    
+    ]
+  },
+    {
+    "category": "POWER WEEDER",
+    "products": [
+      {
+        "name": "MT900GA1-208CC",
+        "image": "/mechnova/products/gasoline-tiller/MT900GA-208CC.webp",
+        "link": "/products/gasoline-tiller"
+      },
+      {
+        "name": "ME70A",
+        "image": "/mechnova/products/gasoline-tiller/MT900GA1-208CC.webp",
+        "link": "/products/gasoline-tiller"
+      }
+    
     ]
   }
 ]
