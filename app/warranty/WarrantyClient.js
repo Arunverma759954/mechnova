@@ -34,7 +34,7 @@ function WarrantyPage() {
         {/* Paragraph Section */}
         <div className="container mx-auto px-4 max-w-4xl mb-12">
           <h1 className="text-center text-4xl md:text-5xl font-extrabold text-[#0072ce] drop-shadow-lg mb-3">
-            Warranty Registration & Dealer Support
+            Warranty Registration 
           </h1>
           <p className="text-center text-xl text-gray-800 font-semibold mb-4">
             {t("dealer.tagline")}
@@ -104,9 +104,15 @@ function WarrantyPage() {
       <option value="" disabled>
         Select product code
       </option>
-      <option value="P001">P001</option>
-      <option value="P002">P002</option>
-      <option value="P003">P003</option>
+      <option value="MBC37SC">MBC37SC Brush Cutter</option>
+      <option value="MBC37SBC">MBC37SBC Back Pack Brushcutter</option>
+      <option value="MCS58A-22SN">MCS58A-22SN Chainsaw</option>
+      <option value="MWP1.5X1.5SA">MWP1.5X1.5SA Water Pump</option>
+      <option value="MWP3X3SA">MWP3X3SA Water Pump</option>
+      <option value="ME30A">ME30A Petrol Engine</option>
+      <option value="ME70A">ME70A Petrol Engine</option>
+      <option value="MT900GA-208CC">MT900GA-208CC Power Weeder</option>
+      <option value="MT900GA1-208CC">MT900GA1-208CC Power Weeder</option>
     </select>
   </div>
 
