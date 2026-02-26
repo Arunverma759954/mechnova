@@ -16,7 +16,7 @@ function WarrantyPage() {
     const formData = new FormData(e.target);
 
     try {
-      const res = await fetch("/api/submit", {
+      const res = await fetch("https://blog.mechnovamachines.in/warranty_save/warranty_save.php", {
         method: "POST",
         body: formData,
       });
