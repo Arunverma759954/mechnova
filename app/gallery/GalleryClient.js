@@ -51,7 +51,7 @@ function GalleryClient() {
                     className="absolute inset-0 w-full h-full object-cover hover:scale-110 transition duration-300"
                   />
                 </button>
-                <p className="text-center font-semibold text-gray-800 mt-3 text-lg">
+                <p className="text-center hidden font-semibold text-gray-800 mt-3 text-lg">
                   {t(`gallery.${item.captionKey}`)}
                 </p>
               </div>
