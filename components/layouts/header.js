@@ -36,7 +36,7 @@ function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:block">
           <ul className="flex space-x-4 text-xl">
-            <li><Link href="/" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.home')}</Link></li>
+           
             <li><Link href="/about" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.about')}</Link></li>
             <li><Link href="/products" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.products')}</Link></li>
             <li><Link href="/gallery" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.gallery')}</Link></li>
