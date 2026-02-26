@@ -48,7 +48,7 @@ function WarrantyPage() {
         <section className="container mx-auto px-4 max-w-2xl pb-16">
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h2 className="text-2xl font-bold text-[#0072ce] mb-6">
-              {t("dealer.formTitle")}
+              Warranty Registration Form
             </h2>
 
             <form
@@ -88,6 +88,19 @@ function WarrantyPage() {
     className="w-full px-4 py-3 border border-gray-300 rounded-r-lg focus:border-[#0072ce] focus:outline-none"
   />
 </div>
+  </div>
+{/* Address */}
+  <div>
+    <label className="block text-gray-800 font-semibold mb-2">
+      Address *
+    </label>
+    <input
+      type="text"
+      name="address"
+      placeholder="Enter full address"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0072ce] focus:outline-none"
+    />
   </div>
 
   {/* Product Code */}
