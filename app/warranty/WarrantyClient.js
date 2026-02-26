@@ -176,7 +176,6 @@ function WarrantyPage() {
                     type="file"
                     name="invoice"
                     accept=".jpg,.jpeg,.png,.webp,.pdf"
-                    required
                     className="hidden"
                     id="fileUpload"
                   />
