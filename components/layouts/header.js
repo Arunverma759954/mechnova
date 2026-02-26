@@ -80,7 +80,6 @@ function Header() {
             x
           </button>
           <ul className="flex flex-col mt-20 space-y-6 text-xl px-8">
-            <li><Link href="/" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.home')}</Link></li>
             <li><Link href="/about" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.about')}</Link></li>
             <li><Link href="/products" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.products')}</Link></li>
             <li><Link href="/gallery" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.gallery')}</Link></li>
