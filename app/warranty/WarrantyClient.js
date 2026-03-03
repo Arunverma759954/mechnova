@@ -76,7 +76,7 @@ function WarrantyPage() {
             
             {/* Image */}
             <div className="md:w-1/3 flex justify-center">
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#0072ce] shadow-xl">
+              <div className="relative w-48 h-auto md:w-56 md:h-auto border-4 border-[#0072ce] shadow-xl">
                 <Image
                   src="/mechnovamachines-warranty.png"
                   alt="Mechnova Machines Warranty Shield"
