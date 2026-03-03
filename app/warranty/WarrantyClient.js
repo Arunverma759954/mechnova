@@ -4,6 +4,7 @@ import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import { useRef } from "react";
 import { useTranslation } from "@/lib/useTranslation";
+import Image from "next/image";
 
 function WarrantyPage() {
 
@@ -57,17 +58,35 @@ function WarrantyPage() {
           />
         </section>
 
-        {/* Paragraph Section */}
-        <div className="container mx-auto px-4 max-w-4xl mb-12 mt-12 md:mt-0">
-          <h1 className="text-center text-4xl md:text-5xl font-extrabold text-[#0072ce] drop-shadow-lg mb-3">
-            Warranty Registration 
-          </h1>
-          <p className="text-center text-xl text-gray-800 font-semibold mb-4">
-            {t("dealer.tagline")}
-          </p>
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto">
-            {t("dealer.intro")}
-          </p>
+        {/* Paragraph Section with Image */}
+        <div className="container mx-auto px-4 max-w-5xl mb-12 mt-12 md:mt-0">
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
+            {/* Text Content */}
+            <div className="md:w-2/3">
+              <h1 className="text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#0072ce] drop-shadow-lg mb-3">
+                Warranty Registration 
+              </h1>
+              <p className="text-center md:text-left text-xl text-gray-800 font-semibold mb-4">
+                {t("dealer.tagline")}
+              </p>
+              <p className="text-center md:text-left text-gray-700 text-lg">
+                {t("dealer.intro")}
+              </p>
+            </div>
+            
+            {/* Image */}
+            <div className="md:w-1/3 flex justify-center">
+              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#0072ce] shadow-xl">
+                <Image
+                  src="/mechnova/mechnovamachines-warranty.png"
+                  alt="Mechnova Machines Warranty Shield"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Form Section */}
