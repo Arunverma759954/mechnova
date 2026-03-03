@@ -76,15 +76,15 @@ function WarrantyPage() {
             
             {/* Image */}
             <div className="md:w-1/3 flex justify-center">
-              <div className="relative w-48 h-auto md:w-56 md:h-auto border-4 border-[#0072ce] shadow-xl">
-                <Image
-                  src="/mechnovamachines-warranty.png"
-                  alt="Mechnova Machines Warranty Shield"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+             <div className="relative w-40 sm:w-48 md:w-56 aspect-[612/792] border-4 border-[#0072ce] shadow-xl">
+  <Image
+    src="/mechnovamachines-warranty.png"
+    alt="Mechnova Machines Warranty Shield"
+    fill
+    className="object-contain"
+    priority
+  />
+</div>
             </div>
           </div>
         </div>
