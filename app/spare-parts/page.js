@@ -1,10 +1,10 @@
 import { Suspense } from "react"
-import SparePartClient from "./SparePartClient"
+import SparePartsClient from "./SparePartsClient"
 
 export default function Page() {
   return (
     <Suspense fallback={null}>
-      <SparePartClient />
+      <SparePartsClient />
     </Suspense>
   )
 }
