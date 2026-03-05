@@ -62,7 +62,7 @@ function SparePartsPage() {
         <div className="container mx-auto px-4 max-w-5xl mb-12 mt-12 md:mt-0">
           <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
             {/* Text Content */}
-            <div className="w-full">
+            <div className="w-full text-center">
               <h1 className="text-center md:text-left text-4xl md:text-5xl font-extrabold text-[#0072ce] drop-shadow-lg mb-3">
                 Spare Parts Request
               </h1>
