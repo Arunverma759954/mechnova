@@ -147,7 +147,7 @@ function SparePartsPage() {
     required
     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0072ce] focus:outline-none"
   >
-    <option value="" disabled>Select Product</option>
+    <option value="">Select Product</option>
     <option value="">option 1</option>
     <option value="">option 2</option>
     </select>
