@@ -137,17 +137,20 @@ function SparePartsPage() {
               </div>
 
               {/* Product Name / Model */}
-              <div>
-                <label className="block text-gray-800 font-semibold mb-2">
-                  Product Name / Model *
-                </label>
-                <input
-                  type="text"
-                  name="product_model"
-                  placeholder="Enter product name or model"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0072ce] focus:outline-none"
-                />
+             <div>
+  <label className="block text-gray-800 font-semibold mb-2">
+    Product Name / Model *
+  </label>
+
+  <select
+    name="product_model"
+    required
+    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0072ce] focus:outline-none"
+  >
+    <option value="" disabled>Select Product</option>
+    <option value="">option 1</option>
+    <option value="">option 2</option>
+    </select>
               </div>
 
               {/* Spare Part Required */}
