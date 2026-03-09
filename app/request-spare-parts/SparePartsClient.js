@@ -8,6 +8,18 @@ import Image from "next/image";
 
 function SparePartsPage() {
 
+  const products = [
+  { value: "MBC37SC", label: "MBC37SC Brush Cutter" },
+  { value: "MBC37SBC", label: "MBC37SBC Back Pack Brushcutter" },
+  { value: "MCS58A-22SN", label: "MCS58A-22SN Chainsaw" },
+  { value: "MWP1.5X1.5SA", label: "MWP1.5X1.5SA Water Pump" },
+  { value: "MWP3X3SA", label: "MWP3X3SA Water Pump" },
+  { value: "ME30A", label: "ME30A Petrol Engine" },
+  { value: "ME70A", label: "ME70A Petrol Engine" },
+  { value: "MT900GA-208CC", label: "MT900GA-208CC Power Weeder" },
+  { value: "MT900GA1-208CC", label: "MT900GA1-208CC Power Weeder" },
+];
+
   const { t } = useTranslation();
   const formRef = useRef(null);
 
@@ -148,8 +160,11 @@ function SparePartsPage() {
     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0072ce] focus:outline-none"
   >
     <option value="">Select Product</option>
-    <option value="">option 1</option>
-    <option value="">option 2</option>
+      {products.map((product) => (
+    <option value={product.value}>
+      {product.label}
+    </option>
+  ))}
     </select>
               </div>
 
