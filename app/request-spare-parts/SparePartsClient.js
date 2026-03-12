@@ -29,7 +29,7 @@ function SparePartsPage() {
     const formData = new FormData(e.target);
 
     try {
-      const res = await fetch("https://blog.mechnovamachines.in/warranty_save/warranty_save.php", {
+      const res = await fetch("https://blog.mechnovamachines.in/mechnova_in/spare_part_requests.php", {
         method: "POST",
         body: formData,
       });
@@ -141,7 +141,7 @@ function SparePartsPage() {
                 </label>
                 <input
                   type="email"
-                  name="email_id"
+                  name="email"
                   placeholder="Enter your email address"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0072ce] focus:outline-none"
