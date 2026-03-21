@@ -208,6 +208,11 @@
           "answer": "If you are a customer and wish to buy Mechnova machines online, please visit our official website: shop.mechnovamachines.in."
         }
       ]
+    },
+    "onlineStores": {
+      "title": "Our Online Stores",
+      "subtitle": "Our online stores provide a convenient and secure way to shop for our products from anywhere in India.",
+      "authorizedRetailers": "Authorized Mechnova Retailers"
     }
   },
   "about": {

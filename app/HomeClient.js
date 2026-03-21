@@ -7,6 +7,7 @@ import Hero from "@/components/sections/hero";
 import Industries from "@/components/sections/industries";
 import Products from "@/components/sections/products";
 import Segment from "@/components/sections/segment";
+import OnlineStores from "@/components/sections/online-stores";
 import Social from "@/components/sections/social";
 import Testimonials from "@/components/sections/testimonials";
 import LanguageSwitcher from "@/components/LanguageSwitcher.js";
@@ -39,6 +40,7 @@ export default function HomePage() {
             <Industries/>
             {/* <Social/> */}
             {/* <Testimonials/> */}
+            <OnlineStores />
             <Faqs/>
             
             {/* Call to Action */}
