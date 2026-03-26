@@ -15,6 +15,9 @@ const GALLERY_ITEMS = [
   { src: "/gallery7.webp", captionKey: "caption7" },
   { src: "/gallery8.webp", captionKey: "caption8" },
   { src: "/mechnova/banner/Agroindustrial.webp", captionKey: "caption9" },
+  { src: "/gallery/26mar-1.webp", captionKey: "Petrol Power Weeders in India" },
+  { src: "/gallery/26mar-2.webp", captionKey: "power weeder brand in India," },
+  { src: "/gallery/26mar-3.webp", captionKey: "Mechnova Power Weeder" },
 ];
 
 function GalleryClient() {
