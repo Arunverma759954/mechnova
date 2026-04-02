@@ -21,7 +21,7 @@
     "id": "5",
     "name": "কৃষি-শিল্প",
     "products": {
-      "gasoline-tiller": {
+      "power-weeder": {
         "id": "1",
         "name": "পাওয়ার উইডার",
         "detail": "yes",
