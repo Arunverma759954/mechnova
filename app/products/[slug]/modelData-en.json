@@ -186,7 +186,7 @@
         "models": [
             {
                 "code": "MBC37SC",
-                "name": "GASOLINE BRUSH CUTTER",
+                "name": "Brush Cutter",
                 "id": "1", 
                 "warranty": "6 Months",
                 "image": "/mechnova/products/brushcutter/BBC26DA.webp",
@@ -194,10 +194,10 @@
             },
             {
                 "code": "MBC37SBC",
-                "name": "GASOLINE BRUSH CUTTER",
+                "name": "Backpack Brush Cutter",
                 "id": "2", 
                 "warranty": "6 Months",
-                "image": "/mechnova/products/brushcutter/BBC33DA.webp",
+                "image": "/mechnova/products/brushcutter/MBC37SBC.webp",
                 "specifications": "Engine: Gasoline, 4-Stroke, 37.7CC\nMaximum Power: 1.35HP\nFuel Mix: 40:1 for Synthetic Oil and 25:1 for Mineral Oil\nTank Capacity: 0.8 Liters\nCarburetor: Diaphragm\nReinforced Exhaust\nStarting Type: Manual Recoil\nShaft Diameter: 26 mm\nD-Handle"
             }
             
@@ -527,7 +527,7 @@
         ]
     },
 
-    "gasoline-tiller":{
+    "power-weeder":{
         "id": "1",
         "name": "POWER WEEDER",
         "category": "agro-industrial",
@@ -541,15 +541,15 @@
                 "name": "POWER WEEDER",
                 "id": "1", 
                 "warranty": "6 Months",
-                "image": "/mechnova/products/gasoline-tiller/BT900GA-208CC.webp",
+                "image": "/mechnova/products/gasoline-tiller/MT900GA-208CC.webp",
                 "specifications": "Engine: Gasoline, 4-Stroke, 212CC\nTillage Cultivator\nHandlebar Adjustable in Height and Rotation\nCutting Width Up to 900 mm\nTillage Depth Up to 100 mm\nWith Forward and Reverse Speed\nFuel Tank Capacity: 3.6 Liters\nTransmission by Gearbox, with PTO\nManual Recoil Start"
             },
             {
-                "code": "MT900G-208CC",
+                "code": "MT900GA1-208CC",
                 "name": "POWER WEEDER",
                 "id": "2", 
                 "warranty": "6 Months",
-                "image": "/mechnova/products/gasoline-tiller/BT900GA-208CC.webp",
+                "image": "/mechnova/products/gasoline-tiller/MT900GA1-208CC.webp",
                 "specifications": "Engine: Gasoline, 4-Stroke, 212CC\nTillage Cultivator\nHandlebar Adjustable in Height and Rotation\nCutting Width Up to 900 mm\nTillage Depth Up to 100 mm\nWith Forward and Reverse Speed\nFuel Tank Capacity: 3.6 Liters\nTransmission by Gearbox, with PTO\nManual Recoil Start"
             }
         ]
@@ -590,14 +590,14 @@
         "category": "agro-industrial",
         "description": "Gasoline engines for agricultural and industrial applications",
         "hero_image": "/mechnova/products/gasoline-engine/hero-gasoline-engine.webp",
-        "error_image": "/mechnova/products/gasoline-engine/BE40A.webp",
+        "error_image": "/mechnova/products/gasoline-engine/ME30A.webp",
         "models": [
             {
                 "code": "ME30A",
                 "name": "GASOLINE ENGINE",
                 "id": "1",
                 "warranty": "6 Months",
-                "image": "/mechnova/products/gasoline-engine/BE40A.webp",
+                "image": "/mechnova/products/gasoline-engine/ME30A.webp",
                 "specifications": "Engine: 4.0 HP, 4-Stroke, 113cc\nTechnology: OHV, Overhead Valves\nCooling system: Air\nCylinder diameter: 60*40 mm\nMaximum power: 4 HP\nFuel tank capacity: 2.0 Liters\nOil reservoir capacity: 350 ml\nStarting system: Recoil"
             },
             {
@@ -605,7 +605,7 @@
                 "name": "GASOLINE ENGINE",
                 "id": "2",
                 "warranty": "6 Months",
-                "image": "/mechnova/products/gasoline-engine/BE70A.webp",
+                "image": "/mechnova/products/gasoline-engine/ME70A.webp",
                 "specifications": "Engine: 7.0 HP, 4-Stroke, 210cc\nTechnology: OHV, Overhead Valves\nCooling system: Air\nCylinder diameter: 70*54 mm\nMaximum power: 7 HP\nFuel tank capacity: 3.6 Liters\nOil reservoir capacity: 600 ml\nStarting system: Recoil"
             }
         ]

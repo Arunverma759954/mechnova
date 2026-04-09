@@ -60,12 +60,12 @@
     "category": "POWER WEEDER",
     "products": [
       {
-        "name": "MT900GA1-208CC",
+        "name": "MT900GA-208CC",
         "image": "/mechnova/products/gasoline-tiller/MT900GA-208CC.webp",
         "link": "/products/gasoline-tiller"
       },
       {
-        "name": "ME70A",
+        "name": "MT900GA1-208CC",
         "image": "/mechnova/products/gasoline-tiller/MT900GA1-208CC.webp",
         "link": "/products/gasoline-tiller"
       }

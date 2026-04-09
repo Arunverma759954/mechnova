@@ -37,6 +37,7 @@ function Footer() {
                 <Link href="/products" className="hover:text-[#005FA3] transition">{t('header.products')}</Link>
                 <Link href="https://blog.mechnovamachines.in" target="_blank" className="hover:text-[#005FA3] transition">{t('header.blog')}</Link>
                 <Link href="/dealer" className="hover:text-[#005FA3] transition">{t('header.dealer')}</Link>
+                  <Link href="/warranty" className="hover:text-[#005FA3] transition">Warranty Registration</Link>
                 <Link href="/contact" className="hover:text-[#005FA3] transition">{t('header.contact')}</Link>
             </nav>
             <div className="flex flex-row gap-4 mt-10 justify-center">
@@ -64,7 +65,7 @@ function Footer() {
             <div className="hidden md:block"/>
             <div className="hidden md:block"/>
             <div className="text-center md:text-left text-gray-700 text-base mb-4 md:mb-0">
-                <div>© {new Date().getFullYear()} MechNova. {t('footer.allRightsReserved')}</div>
+                <div>© {new Date().getFullYear()} Mechnova Machines. {t('footer.allRightsReserved')}</div>
             </div>
             <div className="flex flex-row gap-2 sm:gap-4 text-sm text-gray-600">
                 <Link href="/privacy" className="hover:text-[#005FA3] transition">

@@ -21,7 +21,7 @@
         "id": "5",
         "name": "कृषि-औद्योगिक",
         "products": {
-            "gasoline-tiller": {
+            "power-weeder": {
                 "id": "1",
                 "name": "पेट्रोल टिलर",
                 "detail": "हाँ",

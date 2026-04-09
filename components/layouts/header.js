@@ -36,7 +36,7 @@ function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:block">
           <ul className="flex space-x-4 text-xl">
-            <li><Link href="/" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.home')}</Link></li>
+           
             <li><Link href="/about" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.about')}</Link></li>
             <li><Link href="/products" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.products')}</Link></li>
             <li><Link href="/gallery" className="hover:border-[#3394E6] hover:bg-[#3394E6] hover:text-white p-2 rounded-md cursor-pointer">{t('header.gallery')}</Link></li>
@@ -80,7 +80,6 @@ function Header() {
             x
           </button>
           <ul className="flex flex-col mt-20 space-y-6 text-xl px-8">
-            <li><Link href="/" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.home')}</Link></li>
             <li><Link href="/about" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.about')}</Link></li>
             <li><Link href="/products" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.products')}</Link></li>
             <li><Link href="/gallery" className="hover:text-[#3394E6]" onClick={() => setOpen(false)}>{t('header.gallery')}</Link></li>

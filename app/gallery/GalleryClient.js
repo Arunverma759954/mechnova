@@ -15,6 +15,9 @@ const GALLERY_ITEMS = [
   { src: "/gallery7.webp", captionKey: "caption7" },
   { src: "/gallery8.webp", captionKey: "caption8" },
   { src: "/mechnova/banner/Agroindustrial.webp", captionKey: "caption9" },
+  { src: "/gallery/26mar-1.webp", captionKey: "Petrol Power Weeders in India" },
+  { src: "/gallery/26mar-2.webp", captionKey: "power weeder brand in India," },
+  { src: "/gallery/26mar-3.webp", captionKey: "Mechnova Power Weeder" },
 ];
 
 function GalleryClient() {
@@ -51,7 +54,7 @@ function GalleryClient() {
                     className="absolute inset-0 w-full h-full object-cover hover:scale-110 transition duration-300"
                   />
                 </button>
-                <p className="text-center font-semibold text-gray-800 mt-3 text-lg">
+                <p className="text-center hidden font-semibold text-gray-800 mt-3 text-lg">
                   {t(`gallery.${item.captionKey}`)}
                 </p>
               </div>
