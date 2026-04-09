@@ -105,13 +105,25 @@ export default function ModelDetailClient({ slug, model }) {
   </div>
 
 </div> 
-          <div className="mx-auto text-center">
-            <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">
-              {productName}
+          <div className="mx-auto text-center mb-12">
+            <h3 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">
+              {modelName || productName}
             </h3>
-            <p className="text-2xl text-gray-600 mb-4">
-              Model: <span className="font-semibold text-[#0072ce]">{currentModel.code}</span>
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+              <div className="bg-[#0072ce]/10 px-6 py-2 rounded-full border border-[#0072ce]/20">
+                <p className="text-lg md:text-xl text-gray-700">
+                  Code: <span className="font-bold text-[#0072ce]">{currentModel.code}</span>
+                </p>
+              </div>
+              <div className="bg-orange-50 px-6 py-2 rounded-full border border-orange-100 flex items-center gap-2">
+                <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <p className="text-lg md:text-xl text-gray-700 font-medium">
+                  Warranty: <span className="font-bold text-orange-700">{warranty}</span>
+                </p>
+              </div>
+            </div>
           </div>        
 
           {/* Product Image and Description */}
@@ -145,17 +157,43 @@ export default function ModelDetailClient({ slug, model }) {
             {/* Product Description */}
             <div className="space-y-6">
               {/* Specifications */}
-              <div className="bg-white rounded-xl shadow-md p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {t('home.productsPage.specifications')}
-                </h3>
-                <div className="space-y-2">
-                  {specifications.split('\n').map((spec, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#0072ce] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">{spec}</span>
-                    </div>
-                  ))}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                <div className="bg-gray-50 border-b border-gray-100 p-6">
+                  <h3 className="text-xl font-black text-gray-900 tracking-tight">
+                    {t('home.productsPage.specifications')}
+                  </h3>
+                </div>
+                <div className="p-0">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse">
+                      <tbody>
+                        {specifications.split('\n').map((spec, index) => {
+                          const parts = spec.split(':');
+                          const label = parts[0]?.trim();
+                          const value = parts.slice(1).join(':')?.trim();
+
+                          return (
+                            <tr key={index} className="border-b last:border-0 border-gray-50 hover:bg-blue-50/30 transition-colors">
+                              {value ? (
+                                <>
+                                  <td className="py-4 px-6 font-bold text-gray-900 bg-gray-50/50 w-1/3 text-sm uppercase tracking-wider">
+                                    {label}
+                                  </td>
+                                  <td className="py-4 px-6 text-gray-700 font-medium">
+                                    {value}
+                                  </td>
+                                </>
+                              ) : (
+                                <td colSpan={2} className="py-4 px-6 text-gray-700 font-medium bg-[#0072ce]/5 text-center">
+                                  {spec}
+                                </td>
+                              )}
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 

@@ -10,7 +10,7 @@ const exo2 = Exo_2({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://mechnovamachines.com"),
+  metadataBase: new URL("https://mechnova.in"),
   title: {
     default: "Mechnova | Agricultural Machinery & Equipment Supplier",
     template: "%s | Mechnova"

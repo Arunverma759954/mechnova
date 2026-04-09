@@ -107,7 +107,7 @@ function DealerPage() {
                 className="bg-white rounded-3xl shadow-md border border-blue-100 px-6 py-7 flex items-start gap-3 hover:-translate-y-1 hover:shadow-xl transition-all min-h-[170px]"
               >
                 <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0072ce]">
-                  •
+                   •
                 </span>
                 <p className="text-gray-900 text-base md:text-lg font-medium">
                   {t(`dealer.${key}`)}
@@ -129,13 +129,77 @@ function DealerPage() {
                 className="bg-white rounded-3xl shadow-md border border-blue-100 px-6 py-7 flex items-start gap-3 hover:-translate-y-1 hover:shadow-xl transition-all min-h-[170px]"
               >
                 <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0072ce]">
-                  🔹
+                   🔹
                 </span>
                 <p className="text-gray-900 text-base md:text-lg font-medium">
                   {t(`dealer.${key}`)}
                 </p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* The Mechnova Advantage - Premium Section */}
+        <section className="container mx-auto px-4 py-16 max-w-6xl">
+          <div className="bg-gradient-to-br from-[#0072ce] to-blue-800 rounded-[3rem] p-10 md:p-20 text-white shadow-2xl relative overflow-hidden border border-white/10">
+            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="inline-block px-4 py-2 bg-blue-400/20 rounded-full text-blue-100 text-sm font-bold tracking-widest uppercase mb-4">
+                  Partnership Growth
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black leading-tight">
+                  Unlocking the <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
+                    Mechnova Advantage
+                  </span>
+                </h2>
+                <div className="space-y-6 text-lg md:text-xl opacity-90 leading-relaxed font-light">
+                  <p className="border-l-4 border-blue-400 pl-6 py-2 bg-blue-400/5 rounded-r-xl">
+                    {t("dealer.adv1")}
+                  </p>
+                  <p className="border-l-4 border-white/30 pl-6 py-2">
+                    {t("dealer.adv2")}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-xl rounded-[2.5rem] p-10 border border-white/20 shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                  <div className="mb-8">
+                    <svg className="w-12 h-12 text-blue-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    <p className="text-2xl md:text-3xl font-bold leading-snug italic text-white mb-8">
+                      &quot;{t("dealer.adv3")}&quot;
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-6">
+                    <button 
+                      onClick={() => document.getElementById("dealer-form")?.scrollIntoView({ behavior: "smooth" })}
+                      className="w-full py-5 bg-white text-[#0072ce] font-black text-xl rounded-2xl hover:bg-blue-50 transition-all shadow-xl hover:shadow-white/10 active:scale-95"
+                    >
+                      {t("dealer.submitFormBtn")}
+                    </button>
+                    <div className="flex items-center justify-center gap-3 opacity-70">
+                      <div className="flex -space-x-2">
+                         {[1,2,3,4].map(i => (
+                           <div key={i} className="w-8 h-8 rounded-full bg-blue-400 border-2 border-blue-600 flex items-center justify-center text-[10px] font-bold">M</div>
+                         ))}
+                      </div>
+                      <p className="text-sm font-medium">Join 1,000+ growing partners</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative glow */}
+                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-400/30 blur-[100px] rounded-full"></div>
+              </div>
+            </div>
+            
+            {/* Background Decorations */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-900/40 rounded-full -ml-40 -mb-40 blur-3xl"></div>
           </div>
         </section>
 
