@@ -6,6 +6,7 @@ export async function generateMetadata({ params }) {
   
   if (slug === 'chainsaw') {
     return {
+      metadataBase: new URL("https://mechnovamachines.com"),
       title: "Chainsaw Machine: Best Petrol Wood Cutting Machine in India",
       description: "Explore the best chainsaw machine in India. Discover petrol engine wood cutting machines for tree cutting, farming, and heavy-duty use.",
       openGraph: {
@@ -38,6 +39,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
+    metadataBase: new URL("https://mechnovamachines.com"),
     title: `${productName} | Mechnova Machines`,
     description: `High-quality ${productName} for agriculture, gardening, and forestry. Professional performance and durability from Mechnova.`,
   }
