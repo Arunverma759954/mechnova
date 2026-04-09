@@ -28,13 +28,17 @@ export async function generateMetadata({ params }) {
   }
 
   // Fallback metadata logic
-  let productName = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ')
+  let productName = "Product"
   
-  // Try to find the real name from category data
-  for (const category of Object.values(categoryDataEn)) {
-    if (category.products && category.products[slug]) {
-      productName = category.products[slug].name
-      break
+  if (slug) {
+    productName = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ')
+    
+    // Try to find the real name from category data
+    for (const category of Object.values(categoryDataEn)) {
+      if (category.products && category.products[slug]) {
+        productName = category.products[slug].name
+        break
+      }
     }
   }
 
