@@ -5,6 +5,14 @@ import Header from '@/components/layouts/header'
 import { useTranslation } from '@/lib/useTranslation'
 import Link from 'next/link'
 import detailedModelData from '../detailedModelData.json'
+import { 
+  ChainsawSEOIntro, 
+  ChainsawSEOFeatures, 
+  ChainsawSEOUses, 
+  ChainsawSEOConclusion,
+  BrushCutterSEOTop, 
+  BrushCutterSEOBottom 
+} from '@/components/sections/SEOModules'
 
 export default function ModelDetailClient({ slug, model }) {
   const { t, locale } = useTranslation()
@@ -41,7 +49,6 @@ export default function ModelDetailClient({ slug, model }) {
   const modelName = locale === 'en' ? (currentModel.nameEn || currentModel.name) : currentModel.name
   const specifications = locale === 'en' ? (currentModel.specificationsEn || currentModel.specifications) : currentModel.specifications
   const features = locale === 'en' ? (currentModel.featuresEn || currentModel.features) : currentModel.features
-  const applications = locale === 'en' ? (currentModel.applicationsEn || currentModel.applications) : currentModel.applications
   const warranty = locale === 'en' ? (productData.warrantyEn || productData.warranty) : productData.warranty
 
   return (
@@ -52,9 +59,9 @@ export default function ModelDetailClient({ slug, model }) {
         {/* Banner */}
         <div className="relative w-full mb-8">
           <img 
-            src={productData.banner_image} 
+            src={productData.banner_image || productData.hero_image} 
             alt={productName} 
-            className="w-full h-full object-cover" 
+            className="w-full h-auto object-cover" 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent flex items-center">
             <div className="px-8 md:px-20">
@@ -69,43 +76,11 @@ export default function ModelDetailClient({ slug, model }) {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 pb-12">
-           <div className="mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-              {currentModel.heading}
-            </h2>
-            <p className="text-base text-gray-600 mb-4">
-              {currentModel.subHeading}
-            </p>
-          </div>  
-           {/* Model Leaflet Images */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center p-4 mb-8">
+          {/* SEO Intro at Top */}
+          {slug === 'chainsaw' && locale === 'en' && <ChainsawSEOIntro />}
+          {slug === 'brushcutter' && locale === 'en' && <BrushCutterSEOTop />}
 
-  {/* LEFT — YOUTUBE VIDEO */}
-  <div className="w-full">
-    <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
-      <iframe
-        src="https://www.youtube.com/embed/dR8Go5A0gtI?si=65WWiwTbxRnWtrUn&rel=0&modestbranding=1"
-        title="Product Video"
-        className="absolute top-0 left-0 w-full h-full"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
-  </div>
-
-  {/* RIGHT — IMAGE */}
-  <div className="flex justify-center">
-    <img
-      src={currentModel.image}
-      alt={modelName}
-      className="max-h-[900px] w-auto rounded-lg"
-      onError={(e) => (e.target.src = '/about.webp')}
-    />
-  </div>
-
-</div> 
-          <div className="mx-auto text-center mb-12">
+          <div className="mx-auto text-center mb-12 mt-12">
             <h3 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">
               {modelName || productName}
             </h3>
@@ -216,8 +191,41 @@ export default function ModelDetailClient({ slug, model }) {
             </div>
           </div>
 
+          {/* Model Leaflet Images */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center p-4 mb-8">
+            <div className="w-full">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/dR8Go5A0gtI?si=65WWiwTbxRnWtrUn&rel=0&modestbranding=1"
+                  title="Product Video"
+                  className="absolute top-0 left-0 w-full h-full"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src={currentModel.image}
+                alt={modelName}
+                className="max-h-[900px] w-auto rounded-lg"
+                onError={(e) => (e.target.src = '/about.webp')}
+              />
+            </div>
+          </div> 
+
+          {/* Other SEO Sections Intersperse */}
+          {slug === 'chainsaw' && locale === 'en' && (
+            <div className="space-y-4 mb-12">
+              <ChainsawSEOFeatures />
+              <ChainsawSEOUses />
+              <ChainsawSEOConclusion />
+            </div>
+          )}
+
           {/* FAQs */}
-          <div className="bg-white rounded-xl shadow-md p-6">
+          <div className="bg-white rounded-xl shadow-md p-6 mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               {t('home.productsPage.frequentlyAskedQuestions')}
             </h3>
@@ -241,7 +249,7 @@ export default function ModelDetailClient({ slug, model }) {
           </div>
 
           {/* Back Button */}
-          <div className="mt-8 text-center">
+          <div className="mt-12 text-center">
             <Link href="/products" className="inline-flex items-center gap-2 text-[#0072ce] hover:text-blue-700 font-medium">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -249,6 +257,8 @@ export default function ModelDetailClient({ slug, model }) {
               {t('home.productsPage.backToProducts')}
             </Link>
           </div>
+
+          {slug === 'brushcutter' && locale === 'en' && <BrushCutterSEOBottom />}
         </div>
       </main>
       <Footer />

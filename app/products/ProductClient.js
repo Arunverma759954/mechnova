@@ -55,11 +55,19 @@ const categoryData = locale === 'en'
       <main className="bg-gradient-to-br from-[#E6F2FB] to-[#cbe7ff] min-h-screen pb-12">
         <div className="block" style={{ height: '4.5em' }} aria-hidden="true" />
         {/* Hero Banner */}
-        <div className="relative w-full mb-10">
-          <img src="/mechnova/banner/product-banner.webp" alt="mechnova machines products" className="w-full h-full object-cover" />
+        <div className="relative w-full mb-10 overflow-hidden group">
+          <img 
+            src="/mechnova/banner/product-banner.webp" 
+            alt="mechnova machines products" 
+            className="w-full h-auto object-cover transform hover:scale-105 transition duration-1000" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
         </div>
+
+        {locale === 'en' && <ProductsSEOIntro />}
+
         {/* Categories and Products */}
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mt-10">
           {categories.map(category => {
             // Convert products to array and sort by id
             const products = Object.entries(category.products || {})
@@ -81,7 +89,8 @@ const categoryData = locale === 'en'
           })}
         </div>
 
-        {locale === 'en' && <ProductsSEOContent />}
+
+        {locale === 'en' && <ProductsSEOFeatures />}
       </main>
       <footer>
         <Footer/>
@@ -90,102 +99,182 @@ const categoryData = locale === 'en'
   )
 }
 
-function ProductsSEOContent() {
+function ProductsSEOIntro() {
   return (
-    <section className="mt-20 px-4 md:px-8 max-w-7xl mx-auto border-t border-blue-200 pt-16">
-      <div className="mb-12">
-        <h2 className="text-3xl md:text-5xl font-black text-[#0072ce] mb-6 text-center leading-tight">
-          Agriculture Machinery in India: <br/>
-          <span className="text-gray-800">Explore Mechnova&apos;s Complete Product Range</span>
-        </h2>
-        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-white/40">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-            Agriculture in India is rapidly evolving as there is a rise in adopting modern machinery that improves efficiency and increases productivity while reducing manual labor. In today’s time farmers are shifting towards tools like power weeders, brush cutters, water pumps, and chainsaws to manage their farms more effectively. Among these leading products, Mechnova Machines has proved to be a reliable provider of such high-quality and affordable solutions designed specifically for Indian farming needs.
+    <section className="mt-8 mb-12 px-4 md:px-8 max-w-7xl mx-auto">
+      {/* Intro Header Section - More Compact & Professional */}
+      <div className="bg-white/60 backdrop-blur-md rounded-[2.5rem] p-6 md:p-10 shadow-xl border border-white/50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0072ce]/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#3394E6]/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+        
+        <div className="relative z-10 text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-black text-[#0072ce] mb-4 leading-tight drop-shadow-sm">
+            Agriculture Machinery in India: <br/>
+            <span className="text-gray-800">Explore Mechnova&apos;s Complete Product Range</span>
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-[#0072ce] to-[#3394E6] rounded-full mx-auto mb-6"></div>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            Agriculture in India is rapidly evolving with modern machinery that improves efficiency and productivity while reducing manual labor. Mechnova Machines is a reliable provider of high-quality and affordable solutions designed specifically for Indian farming needs.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-[#0072ce]">Complete Range of Agriculture Machinery in India</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Modern farming requires a combination of tools that are efficient enough for irrigation, soil preparation, harvesting, and crop maintenance. Mechnova offers a wide range of agricultural machinery in India, including power weeders, petrol engine machines, water pumps, chainsaws, and brush cutters, all under one roof.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                These machines are suitable for all types and sizes of land, whether it be small, medium, or large. Focusing on durability and performance, Mechnova ensures that farmers get long-lasting tools that deliver consistent results.
-              </p>
-            </div>
-            <div className="bg-[#0072ce]/5 rounded-2xl p-6 border border-[#0072ce]/10">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
-                  <span className="text-3xl">🚜</span>
-                  <span className="font-semibold text-gray-800">7 HP Power Weeders</span>
-                </div>
-                <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
-                  <span className="text-3xl">💧</span>
-                  <span className="font-semibold text-gray-800">High Flow Water Pumps</span>
-                </div>
-                <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
-                  <span className="text-3xl">🪵</span>
-                  <span className="font-semibold text-gray-800">High RPM Chainsaws</span>
-                </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-bold text-[#0072ce]">Complete Range of Agriculture Machinery in India</h3>
+            <p className="text-gray-650 text-base md:text-lg leading-relaxed">
+              Modern farming requires tools for irrigation, soil preparation, and maintenance. Mechnova offers a wide range of machinery including power weeders, water pumps, and chainsaws all under one roof.
+            </p>
+            <p className="text-gray-650 text-base md:text-lg leading-relaxed">
+              Our machines are durable, perform consistently, and are suitable for all land sizes—ensuring farmers achieve the best results with minimal effort.
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-[#0072ce]/5 to-[#3394E6]/5 rounded-[2rem] p-6 border border-white/60 shadow-inner">
+            <div className="grid grid-cols-1 gap-4">
+              <div className="flex items-center gap-4 bg-white/90 p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <span className="text-3xl">🚜</span>
+                <span className="font-bold text-lg text-gray-800">7 HP Power Weeders</span>
+              </div>
+              <div className="flex items-center gap-4 bg-white/90 p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <span className="text-3xl">💧</span>
+                <span className="font-bold text-lg text-gray-800">High Flow Water Pumps</span>
+              </div>
+              <div className="flex items-center gap-4 bg-white/90 p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <span className="text-3xl">🪵</span>
+                <span className="font-bold text-lg text-gray-800">High RPM Chainsaws</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+  );
+}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white p-8 rounded-3xl shadow-lg border border-blue-50 hover:shadow-2xl transition hover:-translate-y-2">
-          <h3 className="text-xl font-bold text-[#0072ce] mb-4 flex items-center gap-2">
-            <span className="text-2xl">🌱</span> Best Power Weeder Brand in India
-          </h3>
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-            A 7 HP power weeder is an agricultural machine commonly used for the practices of tilling, weeding, and preparation of soil. They&apos;re a good switch from the labor-intensive manual weeding to saving time and enhancing output and yield. The 7 HP denotes the engine power of the machine, which is the horsepower, making it durable enough to handle tough soil conditions while being manageable for the farmers to operate fully by themselves.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base mt-4">
-            A power weeder involves rotating blades, which help in penetrating the soil, uprooting the weeds, and breaking the compacted soil. It is generally a lightweight machine designed to be used easily, having adjustable blades, so that farmers can set the depth and width, as some crops may require shallow tilling of soil, while others may need deep tilling.
-          </p>
+function ProductsSEOFeatures() {
+  return (
+    <section className="mt-20 px-4 md:px-8 max-w-7xl mx-auto space-y-32 pb-20 border-t border-blue-100 pt-20">
+      {/* Zig-Zag Features */}
+      <div className="space-y-32">
+        {/* Feature 1: Power Weeder */}
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+          <div className="w-full md:w-1/2">
+            <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl border-4 border-white">
+              <img 
+                src="/mechnova/products/gasoline-tiller/hero-gasoline-tiller.webp" 
+                alt="Power Weeder" 
+                className="w-full h-[450px] object-cover transform group-hover:scale-105 transition duration-1000" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0072ce]/40 to-transparent"></div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+            <div className="flex items-center gap-4">
+              <span className="text-5xl">🌱</span>
+              <h3 className="text-3xl md:text-4xl font-black text-[#0072ce]">Best Power Weeder Brand in India</h3>
+            </div>
+            <div className="h-2 w-20 bg-gradient-to-r from-[#0072ce] to-[#3394E6] rounded-full"></div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              A 7 HP power weeder is an agricultural machine commonly used for the practices of tilling, weeding, and preparation of soil. They&apos;re a good switch from the labor-intensive manual weeding to saving time and enhancing output and yield.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              A power weeder involves rotating blades, which help in penetrating the soil, uprooting the weeds, and breaking the compacted soil. It is generally a lightweight machine designed to be used easily, having adjustable blades for precise control.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white p-8 rounded-3xl shadow-lg border border-blue-50 hover:shadow-2xl transition hover:-translate-y-2">
-          <h3 className="text-xl font-bold text-[#0072ce] mb-4 flex items-center gap-2">
-            <span className="text-2xl">⚡</span> Gasoline Engine Machines
-          </h3>
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-            These engine-based machines play a crucial role in today’s modern agricultural era due to their efficiency and ease of maintenance. These engines are designed for providing constant power output, smooth operation, and fuel efficiency. Gasoline engines are suitable for those farmers who want portable and easy-to-use machines for daily agricultural tasks. They&apos;re a perfect choice for farmers of India who are looking for easy start mechanisms with low maintenance.
-          </p>
+        {/* Feature 2: Gasoline Engine (Reversed) */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-20">
+          <div className="w-full md:w-1/2">
+            <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl border-4 border-white">
+              <img 
+                src="/mechnova/products/gasoline-engine/hero-gasoline-engine.webp" 
+                alt="Gasoline Engine" 
+                className="w-full h-[450px] object-cover transform group-hover:scale-105 transition duration-1000" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0072ce]/40 to-transparent"></div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+            <div className="flex items-center gap-4">
+              <span className="text-5xl">⚡</span>
+              <h3 className="text-3xl md:text-4xl font-black text-[#0072ce]">Gasoline Engine Machines</h3>
+            </div>
+            <div className="h-2 w-20 bg-gradient-to-r from-[#0072ce] to-[#3394E6] rounded-full"></div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              These engine-based machines play a crucial role in today’s modern agricultural era due to their efficiency and ease of maintenance. These engines are designed for providing constant power output, smooth operation, and fuel efficiency.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Gasoline engines are suitable for those farmers who want portable and easy-to-use machines for daily tasks. They&apos;re a perfect choice for farmers looking for easy start mechanisms and reliability.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white p-8 rounded-3xl shadow-lg border border-blue-50 hover:shadow-2xl transition hover:-translate-y-2">
-          <h3 className="text-xl font-bold text-[#0072ce] mb-4 flex items-center gap-2">
-            <span className="text-2xl">🌊</span> Water Pumps for Irrigation
-          </h3>
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-            Talking about the most critical aspect of farming includes water management. The water pump provided by Mechnova is a reliable solution, as it delivers water transfer for irrigation, drainage, and other various agricultural needs. These machines are equipped with a powerful engine and self-priming system, giving a smooth flow of operation in situations of difficulty. These pumps can be used for multiple farming activities such as irrigating fields, supplying water to crops, and effectively managing water resources. For Indian farmers, Mechnova water pumps are the best solution because of their high flow capacity and durability.
-          </p>
+        {/* Feature 3: Water Pump */}
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+          <div className="w-full md:w-1/2">
+            <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl border-4 border-white">
+              <img 
+                src="/mechnova/products/gasoline-water-pump/hero-gasoline-water-pump.webp" 
+                alt="Water Pump" 
+                className="w-full h-[450px] object-cover transform group-hover:scale-105 transition duration-1000" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0072ce]/40 to-transparent"></div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+            <div className="flex items-center gap-4">
+              <span className="text-5xl">🌊</span>
+              <h3 className="text-3xl md:text-4xl font-black text-[#0072ce]">Water Pumps for Irrigation</h3>
+            </div>
+            <div className="h-2 w-20 bg-gradient-to-r from-[#0072ce] to-[#3394E6] rounded-full"></div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Water management is the most critical aspect of farming. Mechnova pumps are reliable solutions, delivering efficient water transfer for irrigation, drainage, and other agricultural needs.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Equipped with powerful engines and self-priming systems, these machines ensure smooth operation even in difficult conditions. High flow capacity and durability make them a trusted choice for Indian farmers.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white p-8 rounded-3xl shadow-lg border border-blue-50 hover:shadow-2xl transition hover:-translate-y-2">
-          <h3 className="text-xl font-bold text-[#0072ce] mb-4 flex items-center gap-2">
-            <span className="text-2xl">🪓</span> Chainsaw for Maintenance
-          </h3>
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-            Chainsaws are commonly used for forestry, wood-cutting tasks, and farm maintenance. Mechnova chainsaws are powered with powerful engines and ergonomic designs, making them an ideal solution for cutting trees, branches, and firewood. Precise cutting can be done through these machines due to their lightweight and easy-to-handle design. With features like high RPM, durable chains, and efficient fuel usage, they help farmers and rural users complete tasks quickly and safely.
-          </p>
+        {/* Feature 4: Chainsaw (Reversed) */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-20">
+          <div className="w-full md:w-1/2">
+            <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl border-4 border-white">
+              <img 
+                src="/mechnova/products/chainsaw/hero-chainsaw.webp" 
+                alt="Chainsaw" 
+                className="w-full h-[450px] object-cover transform group-hover:scale-105 transition duration-1000" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0072ce]/40 to-transparent"></div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+            <div className="flex items-center gap-4">
+              <span className="text-5xl">🪓</span>
+              <h3 className="text-3xl md:text-4xl font-black text-[#0072ce]">Chainsaw for Maintenance</h3>
+            </div>
+            <div className="h-2 w-20 bg-gradient-to-r from-[#0072ce] to-[#3394E6] rounded-full"></div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Chainsaws are essential for forestry, wood-cutting tasks, and farm maintenance. Mechnova chainsaws feature ergonomic designs and high-performance engines ideal for cutting trees and branches efficiently.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              With features like high RPM, durable chains, and efficient fuel usage, they help farmers and rural users complete demanding tasks quickly and with maximum safety.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white p-8 rounded-3xl shadow-lg border border-blue-50 hover:shadow-2xl transition hover:-translate-y-2">
-          <h3 className="text-xl font-bold text-[#0072ce] mb-4 flex items-center gap-2">
-            <span className="text-2xl">✂️</span> Brush Cutter for Control
-          </h3>
-          <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-            Brushcutters are widely used agricultural machines, used for cutting grass, small bushes, and weeds in farms and gardens. These brushcutters are powered by petrol engines and designed to work for long hours. They have strong cutting ability, low vibration, and a unique ergonomic design, making them a comfortable pick for users. Whether it is field maintenance or boundary cleaning, brush cutters provide fast and efficient results.
-          </p>
-        </div>
-
-        <div className="bg-[#0072ce] p-8 rounded-3xl shadow-lg text-white hover:shadow-2xl transition hover:-translate-y-2 flex flex-col justify-center">
-          <h3 className="text-2xl font-bold mb-4">Conclusion</h3>
-          <p className="leading-relaxed text-sm opacity-90">
-            The demand for agriculture machinery in India is growing as farmers adopt modern tools to improve efficiency and productivity. Mechnova continues to support farmers with innovative and reliable machinery. By investing in high-quality equipment, farmers can reduce manual effort, save time, and achieve better crop yields—making modern farming more profitable and sustainable.
-          </p>
+        {/* Final Conclusion Card */}
+        <div className="bg-gradient-to-r from-[#0072ce] to-[#3394E6] p-10 md:p-16 rounded-[4rem] text-white shadow-2xl relative overflow-hidden text-center">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-10"></div>
+          <div className="relative z-10 max-w-4xl mx-auto space-y-6">
+            <h3 className="text-4xl md:text-5xl font-black mb-4">Conclusion</h3>
+            <p className="text-xl md:text-2xl leading-relaxed opacity-95">
+              The demand for agriculture machinery in India is growing as farmers adopt modern tools to improve efficiency and productivity. Mechnova continues to support farmers with innovative and reliable machinery. 
+            </p>
+            <p className="text-lg opacity-85">
+              By investing in high-quality equipment, farmers can reduce manual effort, save time, and achieve better crop yields—making modern farming more profitable and sustainable.
+            </p>
+          </div>
         </div>
       </div>
     </section>
